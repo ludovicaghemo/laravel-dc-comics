@@ -26,5 +26,9 @@
                 {{ $comic->sale_date }}
             </li>
         </ul>
+
+        <div class="text-start my-5">
+            <a class="btn btn-outline-secondary" href="{{ route('comics.index') }}">Go Back</a>
+        </div>
     </div>    
 @endsection
