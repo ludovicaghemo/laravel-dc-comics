@@ -38,7 +38,7 @@
                         <select id="type" class="form-select" name="type">
                             <option selected value="">Select</option>
                             <option value="graphic_novel">Comic Book</option>
-                            <option value="cortissima">Graphic Novel</option>
+                            <option value="comic_book">Graphic Novel</option>
                         </select>
                     </div>
 
