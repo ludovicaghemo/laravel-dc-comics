@@ -1,12 +1,12 @@
 # CONSEGNA
 
-**Milestone 1**
+- [x] **Milestone 1**
 Tramite gli appositi comandi artisan creare un model con relativa migration e un resource controller.
-**Milestone 2**
+- [] **Milestone 2**
 Iniziare a definire le prime operazioni CRUD con le relative view:
-- index()
-- show()
-- create()
-- store()
+- [x] index()
+- [] show()
+- [] create()
+- [] store()
 
-**Bonus:** creare il seeder per la tabella comics utilizzando il file in allegato.
+- [x] **Bonus:** creare il seeder per la tabella comics utilizzando il file in allegato.

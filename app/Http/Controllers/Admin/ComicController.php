@@ -49,7 +49,11 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        //
+        // dd($id);
+        $comic = Comic::findOrFail($id);
+        // dd($comic->title);
+        return view('comics.show', compact('comic'));
+        // nel compact passo nome della variabile che voglio passare alla view ($comic)
     }
 
     /**

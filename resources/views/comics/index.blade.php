@@ -11,7 +11,7 @@
                 <th scope="col">Title</th>
                 <th scope="col">Series</th>
                 <th scope="col">Type</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Details</th>
               </tr>
             </thead>
             <tbody>
@@ -21,9 +21,8 @@
                     <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
                     <td>{{ $comic->type }}</td>
-                    <td></td>
                     <td>
-                      {{-- <a class="btn btn-success" href="{{ route('pastas.show', ['pasta' => $pasta->id]) }}">Dettagli</a> --}}
+                      <a class="btn btn-success" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
                     </td>
                 </tr>
                 @endforeach
