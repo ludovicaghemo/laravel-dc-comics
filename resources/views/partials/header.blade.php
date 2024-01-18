@@ -16,7 +16,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     {{-- Index route --}}
-                    <a class="nav-link active" aria-current="page" href="{{ route('comics.index') }}">COMICS</a>
+                    <a class="navbar-brand" aria-current="page" href="{{ route('comics.index') }}">COMICS</a>
                   </li>
                 </ul>
               </div>

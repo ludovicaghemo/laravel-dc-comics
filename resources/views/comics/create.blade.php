@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container my-5">
         <h1 class="text-center">Add a new comic</h1>
 
         <div class="row justify-content-center mt-5">
             <div class="col-6 mb-5">
-                <form action="">
+                <form action="{{ route('comics.store') }}" method="POST">
+                    @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" id="title" name="title">
@@ -46,11 +47,10 @@
                         <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                     </div>
 
-                    <button class="btn btn-success" type="submit">Save</button>
+                    <button class="btn btn-outline-secondary" type="submit">Save</button>
 
                 </form>
             </div>
         </div>
-
     </div>
 @endsection
