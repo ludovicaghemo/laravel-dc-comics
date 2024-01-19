@@ -44,20 +44,23 @@ class ComicController extends Controller
         // lui prende i nomi dei campi da name
 
         $comic = new Comic();
-        $comic->title = $form_data['title'];
-        $comic->thumb = $form_data['thumb'];
-        $comic->series = $form_data['series'];
-        $comic->sale_date = $form_data['sale_date'];
-        $comic->price = $form_data['price'];
-        $comic->type = $form_data['type'];
-        $comic->description = $form_data['description'];
-        
+        // $comic->title = $form_data['title'];
+        // $comic->thumb = $form_data['thumb'];
+        // $comic->series = $form_data['series'];
+        // $comic->sale_date = $form_data['sale_date'];
+        // $comic->price = $form_data['price'];
+        // $comic->type = $form_data['type'];
+        // $comic->description = $form_data['description'];
 
+        // Fill
+        $comic->fill($form_data);
+        
         $comic->save();
 
        // Rindirizzamento alla pagina show
        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
+
 
     /**
      * Display the specified resource.
