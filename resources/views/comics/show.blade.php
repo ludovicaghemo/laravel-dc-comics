@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-5">
-        <h1>{{ $comic->title }}</h1>
+        <h1 class="my-4">{{ $comic->title }}</h1>
         <img class="w-25" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
 
         <hr>

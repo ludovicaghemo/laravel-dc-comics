@@ -2,55 +2,60 @@
 
 @section('content')
     <div class="container my-5">
-        <h1 class="text-center">Add a new comic</h1>
+        <h2>Edit comic: {{ $comic->title }}</h2>
 
         <div class="row justify-content-center mt-5">
             <div class="col-6 mb-5">
-                <form action="{{ route('comics.store') }}" method="POST">
+                <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
                     @csrf
+                    @method('PUT')
+                    
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Thumb</label>
-                        <input type="text" class="form-control" id="thumb" name="thumb">
+                        <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="series" class="form-label">Series</label>
-                        <input type="text" class="form-control" id="series" name="series">
+                        <input type="text" class="form-control" id="series" name="series" value="{{ $comic->series }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="sale_date" class="form-label">Sale Date</label>
-                        <input type="date" class="form-control" id="sale_date" name="sale_date">
+                        <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ $comic->sale_date }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="price" name="price">
+                        <input type="text" class="form-control" id="price" name="price" value="{{ $comic->price }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="type" class="form-label">Type</label>
                         <select id="type" class="form-select" name="type">
                             <option selected value="">Select</option>
-                            <option value="graphic novel">graphic novel</option>
-                            <option value="comic book">comic book</option>
+                            <option {{$comic->type === 'graphic novel' ? 'selected' : '' }} value="graphic novel">graphic novel</option>
+                            <option {{$comic->type === 'comic book' ? 'selected' : '' }} value="comic book">comic book</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                        <textarea class="form-control" id="description" rows="3" name="description">{{ $comic->description }}</textarea>
                     </div>
 
-                    <button class="btn btn-outline-secondary" type="submit">Save</button>
+                    <button class="btn btn-outline-warning" type="submit">Save</button>
 
                 </form>
             </div>
+            {{-- /Col --}}
         </div>
+        {{-- /Row --}}
     </div>
+    {{-- /Container --}}
 @endsection

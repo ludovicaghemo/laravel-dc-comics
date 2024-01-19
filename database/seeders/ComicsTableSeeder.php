@@ -18,6 +18,9 @@ class ComicsTableSeeder extends Seeder
         $comic_list = config('comics');
         // dd($comic_list);
         foreach ($comic_list as $comic) {
+            //Creazione del record nel db
+            //$comic = array associativo che contiene dati da salvare
+            //$new_comic è il model di eloquent, oggetto che ci permette di eseguire le operazioni sul database
             $new_comic = new Comic();
             $new_comic->title = $comic['title'];
             $new_comic->description = $comic['description'];

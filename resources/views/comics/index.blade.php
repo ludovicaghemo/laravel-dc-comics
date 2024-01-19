@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-5">
-        <h1>HERE IS THE COMICS LIST</h1>
+    <div class="container my-5">
+        <h1 class="text-center my-5">HERE IS THE COMICS LIST</h1>
 
         <table class="table table-striped my-4">
             <thead>
@@ -23,13 +23,15 @@
                         <td>{{ $comic->type }}</td>
                         <td>
                             <a class="btn btn-outline-secondary" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
+                            <a class="btn btn-outline-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit</a>
+
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
 
-        <div class="text-end">
+        <div class="text-end my-5">
             <a class="btn btn-outline-secondary" href="{{ route('comics.create') }}">Add a new comic</a>
         </div>
     </div>

@@ -40,6 +40,8 @@ class ComicController extends Controller
     {
         // dd($request->all());
         $form_data = $request->all();
+        // dd($form_data);
+        // lui prende i nomi dei campi da name
 
         $comic = new Comic();
         $comic->title = $form_data['title'];
@@ -80,7 +82,10 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        // dd($id);
+        $comic = Comic::findOrFail($id);
+        // dd($comic);
+        return view('comics.edit', compact('comic'));
     }
 
     /**
