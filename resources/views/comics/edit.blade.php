@@ -9,7 +9,7 @@
                 <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
                     @csrf
                     @method('PUT')
-                    
+
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}">
@@ -39,8 +39,8 @@
                         <label for="type" class="form-label">Type</label>
                         <select id="type" class="form-select" name="type">
                             <option selected value="">Select</option>
-                            <option {{$comic->type === 'graphic novel' ? 'selected' : '' }} value="graphic novel">graphic novel</option>
-                            <option {{$comic->type === 'comic book' ? 'selected' : '' }} value="comic book">comic book</option>
+                            <option @selected($comic->type === 'graphic novel') value="graphic novel">graphic novel</option>
+                            <option @selected($comic->type === 'comic book') value="comic book">comic book</option>
                         </select>
                     </div>
 
