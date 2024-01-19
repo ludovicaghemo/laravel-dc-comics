@@ -4,6 +4,12 @@
     <div class="container my-5">
         <h1 class="text-center my-5">HERE IS THE COMICS LIST</h1>
 
+        @if (Session::has('message'))
+            <div class="alert alert-success">
+                {{ Session::get('message') }}
+            </div>
+        @endif
+
         <table class="table table-striped my-4">
             <thead>
                 <tr>
