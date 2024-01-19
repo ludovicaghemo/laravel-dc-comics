@@ -28,13 +28,19 @@
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->type }}</td>
                         <td>
-                            <a class="btn btn-outline-secondary" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
-                            <a class="btn btn-outline-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
+                                <i class="fa-solid fa-info"></i>
+                            </a>
+                            <a class="btn btn-outline-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
 
                             <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" class="d-inline-block" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-outline-danger" type="submit">Delete</button>
+                                <button class="btn btn-outline-danger" type="submit">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </form>
                         </td>
                     </tr>
