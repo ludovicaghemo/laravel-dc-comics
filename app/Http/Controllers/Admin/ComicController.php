@@ -94,10 +94,17 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * Due parametri: request per prendere i dati, id perchè -> singolo comic
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        $comic_to_update = Comic::findOrFail($id);
+        // dd($form_data, $comic_to_update);
+        // Fill
+        $comic_to_update->update($form_data);
+
+        return redirect()->route('comics.show', ['comic' => $comic_to_update->id]);
     }
 
     /**
