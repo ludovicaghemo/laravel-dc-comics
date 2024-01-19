@@ -2,7 +2,11 @@
 
 @section('content')
     <div class="container my-5">
-        <h2>Edit comic: {{ $comic->title }}</h2>
+
+        {{-- Go back btn --}}
+        <a class="btn btn-outline-secondary mb-5" href="{{ route('comics.index') }}">Go Back</a>
+
+        <h2 class="text-center">Edit comic: {{ $comic->title }}</h2>
 
         <div class="row justify-content-center mt-5">
             <div class="col-6 mb-5">
@@ -12,27 +16,32 @@
 
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}">
+                        <input type="text" class="form-control" id="title" name="title"
+                            value="{{ $comic->title }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Thumb</label>
-                        <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
+                        <input type="text" class="form-control" id="thumb" name="thumb"
+                            value="{{ $comic->thumb }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="series" class="form-label">Series</label>
-                        <input type="text" class="form-control" id="series" name="series" value="{{ $comic->series }}">
+                        <input type="text" class="form-control" id="series" name="series"
+                            value="{{ $comic->series }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="sale_date" class="form-label">Sale Date</label>
-                        <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ $comic->sale_date }}">
+                        <input type="date" class="form-control" id="sale_date" name="sale_date"
+                            value="{{ $comic->sale_date }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="price" name="price" value="{{ $comic->price }}">
+                        <input type="text" class="form-control" id="price" name="price"
+                            value="{{ $comic->price }}">
                     </div>
 
                     <div class="mb-3">
@@ -52,6 +61,7 @@
                     <button class="btn btn-outline-warning" type="submit">Save</button>
 
                 </form>
+
             </div>
             {{-- /Col --}}
         </div>

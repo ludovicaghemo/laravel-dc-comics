@@ -12,6 +12,8 @@ tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere confe
 ![preview](resources/img/show.png)
 ![preview](resources/img/form.png)
 ![preview](resources/img/store.png)
-![preview](resources/img/stored.png)
+![preview](resources/img/edit.png)
+![preview](resources/img/delete.png)
+
 
 
