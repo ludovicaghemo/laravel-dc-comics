@@ -35,7 +35,7 @@
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
 
-                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" class="d-inline-block" method="POST">
+                            <form class="d-inline-block" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" class="d-inline-block" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 
