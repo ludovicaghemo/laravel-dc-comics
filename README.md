@@ -1,9 +1,12 @@
 # CONSEGNA
 
-Definire le operazioni CRUD.
+Definire le operazioni CRUD e aggiungere le validazioni.
 
 **Bonus:**
-tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
+- [] tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
+Bonus:
+- [x] validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano.
+- [x] utilizzare le Request personalizzate per validare i dati (*)
 
 ## Preview
 
@@ -15,6 +18,8 @@ tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere confe
 ![preview](resources/img/edit.png)
 ![preview](resources/img/bonus.png)
 ![preview](resources/img/delete.png)
+![preview](resources/img/validation.png)
+
 
 
 
