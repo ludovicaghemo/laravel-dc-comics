@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -100,9 +101,9 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      * Due parametri: request per prendere i dati, id perchè -> singolo comic
      */
-    public function update(Request $request, $id)
+    public function update(UpdateComicRequest $request, $id)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $comic_to_update = Comic::findOrFail($id);
         // dd($form_data, $comic_to_update); 
         // Fill
